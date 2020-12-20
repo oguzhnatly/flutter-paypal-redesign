@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:paypal/colors.dart';
 import 'package:paypal/screens/contacts.dart';
 import 'package:paypal/screens/home.dart';
+import 'package:paypal/screens/wallet.dart';
 
 class BottomNavigationBarCustom extends StatefulWidget {
   @override
@@ -14,8 +15,10 @@ class BottomNavigationBarCustom extends StatefulWidget {
 class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom>
     with TickerProviderStateMixin {
   int _selectedIndex = 0;
-  int animationDuration = 200;
-  Cubic boxAnimationType = Curves.easeInOut;
+  int boxAnimationDuration = 600;
+  int pageAnimationDuration = 500;
+  Cubic pageAnimationType = Curves.ease;
+  Cubic boxAnimationType = Curves.ease;
   double boxWidthNormal = 40;
   double boxWidthExpanded = 90;
 
@@ -36,7 +39,7 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom>
       children: [
         HomePage(),
         ContactsPage(),
-        Text('Screen3'),
+        WalletScreen(),
         Text('Screen4'),
         Text('Screen5'),
       ],
@@ -82,15 +85,16 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom>
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   AnimatedSize(
-                    duration: Duration(milliseconds: animationDuration),
+                    duration: Duration(milliseconds: boxAnimationDuration),
                     curve: boxAnimationType,
                     vsync: this,
                     child: GestureDetector(
                       onTap: () => setState(() {
                         _selectedIndex = 0;
                         _pageController.animateToPage(0,
-                            duration: Duration(milliseconds: 500),
-                            curve: Curves.ease);
+                            duration:
+                                Duration(milliseconds: pageAnimationDuration),
+                            curve: pageAnimationType);
                       }),
                       child: Container(
                         width: _selectedIndex == 0
@@ -123,15 +127,16 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom>
                     ),
                   ),
                   AnimatedSize(
-                    duration: Duration(milliseconds: animationDuration),
+                    duration: Duration(milliseconds: boxAnimationDuration),
                     curve: boxAnimationType,
                     vsync: this,
                     child: GestureDetector(
                       onTap: () => setState(() {
                         _selectedIndex = 1;
                         _pageController.animateToPage(1,
-                            duration: Duration(milliseconds: 500),
-                            curve: Curves.ease);
+                            duration:
+                                Duration(milliseconds: pageAnimationDuration),
+                            curve: pageAnimationType);
                       }),
                       child: Container(
                         width: _selectedIndex == 1
@@ -164,15 +169,16 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom>
                     ),
                   ),
                   AnimatedSize(
-                    duration: Duration(milliseconds: animationDuration),
+                    duration: Duration(milliseconds: boxAnimationDuration),
                     curve: boxAnimationType,
                     vsync: this,
                     child: GestureDetector(
                       onTap: () => setState(() {
                         _selectedIndex = 2;
                         _pageController.animateToPage(2,
-                            duration: Duration(milliseconds: 500),
-                            curve: Curves.ease);
+                            duration:
+                                Duration(milliseconds: pageAnimationDuration),
+                            curve: pageAnimationType);
                       }),
                       child: Container(
                         width: _selectedIndex == 2
@@ -205,15 +211,16 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom>
                     ),
                   ),
                   AnimatedSize(
-                    duration: Duration(milliseconds: animationDuration),
+                    duration: Duration(milliseconds: boxAnimationDuration),
                     curve: boxAnimationType,
                     vsync: this,
                     child: GestureDetector(
                       onTap: () => setState(() {
                         _selectedIndex = 3;
                         _pageController.animateToPage(3,
-                            duration: Duration(milliseconds: 500),
-                            curve: Curves.ease);
+                            duration:
+                                Duration(milliseconds: pageAnimationDuration),
+                            curve: pageAnimationType);
                       }),
                       child: Container(
                         width: _selectedIndex == 3

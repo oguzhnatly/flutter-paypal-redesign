@@ -8,12 +8,14 @@ class CustomBox extends StatefulWidget {
     this.label,
     this.text,
     this.onLeftArea,
+    this.onLeftAreaBackground,
     this.onRightArea,
   }) : super(key: key);
 
   final String label;
   final String text;
   final Widget onLeftArea;
+  final Color onLeftAreaBackground;
   final Text onRightArea;
 
   @override
@@ -53,7 +55,9 @@ class _CustomBoxState extends State<CustomBox> {
                   height: 32,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: colorGray,
+                    color: widget.onLeftAreaBackground != null
+                        ? widget.onLeftAreaBackground
+                        : colorGray,
                   ),
                   child: Center(
                     child: widget.onLeftArea != null
