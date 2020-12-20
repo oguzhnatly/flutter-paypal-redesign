@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:paypal/colors.dart';
+import 'package:paypal/screens/contacts.dart';
 import 'package:paypal/screens/home.dart';
 
 class BottomNavigationBarCustom extends StatefulWidget {
@@ -34,7 +35,7 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom>
       },
       children: [
         HomePage(),
-        Text('Screen2'),
+        ContactsPage(),
         Text('Screen3'),
         Text('Screen4'),
         Text('Screen5'),

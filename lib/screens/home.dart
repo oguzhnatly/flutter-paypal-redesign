@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:paypal/colors.dart';
+import 'package:paypal/widgets/custom_box.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -274,236 +275,43 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  height: 71,
-                  margin: EdgeInsets.only(top: 8),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: colorPrimaryDark.withOpacity(0.1),
-                        blurRadius: 50,
-                        spreadRadius: -20,
-                        offset: Offset(2, 8),
-                      ),
-                    ],
-                    color: colorWhite,
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 16, horizontal: 15),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 32,
-                              height: 32,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: colorGray,
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'M',
-                                  style: GoogleFonts.manrope(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w700,
-                                    color: colorBlack,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 15),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Mike Rine',
-                                    style: GoogleFonts.manrope(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400,
-                                      color: colorBlack,
-                                    ),
-                                  ),
-                                  Text(
-                                    '2 hours ago',
-                                    style: GoogleFonts.manrope(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      color: colorBlack.withOpacity(0.5),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          '+\$250',
-                          style: GoogleFonts.manrope(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: colorGreen,
-                          ),
-                        )
-                      ],
+                CustomBox(
+                  label: 'Mike Rine',
+                  text: '2 hours ago',
+                  onRightArea: Text(
+                    '+\$250',
+                    style: GoogleFonts.manrope(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: colorGreen,
                     ),
                   ),
                 ),
-                Container(
-                  height: 71,
-                  margin: EdgeInsets.only(top: 8),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: colorPrimaryDark.withOpacity(0.1),
-                        blurRadius: 50,
-                        spreadRadius: -20,
-                        offset: Offset(2, 8),
-                      ),
-                    ],
-                    color: colorWhite,
+                CustomBox(
+                  label: 'Google Drive',
+                  text: 'Yesterday',
+                  onLeftArea: SvgPicture.asset(
+                    'assets/icons/google_drive.svg',
+                    color: colorBlack,
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 16, horizontal: 15),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 32,
-                              height: 32,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: colorGray,
-                              ),
-                              child: Center(
-                                child: SvgPicture.asset(
-                                  'assets/icons/google_drive.svg',
-                                  color: colorBlack,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 15),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Google Drive',
-                                    style: GoogleFonts.manrope(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400,
-                                      color: colorBlack,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Yesterday',
-                                    style: GoogleFonts.manrope(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      color: colorBlack.withOpacity(0.5),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          '-\$138.5',
-                          style: GoogleFonts.manrope(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: colorRed,
-                          ),
-                        )
-                      ],
+                  onRightArea: Text(
+                    '-\$138.5',
+                    style: GoogleFonts.manrope(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: colorRed,
                     ),
                   ),
                 ),
-                Container(
-                  height: 71,
-                  margin: EdgeInsets.only(top: 8),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: colorPrimaryDark.withOpacity(0.1),
-                        blurRadius: 50,
-                        spreadRadius: -20,
-                        offset: Offset(2, 8),
-                      ),
-                    ],
-                    color: colorWhite,
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 16, horizontal: 15),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 32,
-                              height: 32,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: colorGray,
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'C',
-                                  style: GoogleFonts.manrope(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w700,
-                                    color: colorBlack,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 15),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Casey Smith',
-                                    style: GoogleFonts.manrope(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400,
-                                      color: colorBlack,
-                                    ),
-                                  ),
-                                  Text(
-                                    '1 week ago',
-                                    style: GoogleFonts.manrope(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      color: colorBlack.withOpacity(0.5),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          '+\$531',
-                          style: GoogleFonts.manrope(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: colorGreen,
-                          ),
-                        )
-                      ],
+                CustomBox(
+                  label: 'Casey Smith',
+                  text: '1 week ago',
+                  onRightArea: Text(
+                    '+\$531',
+                    style: GoogleFonts.manrope(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: colorGreen,
                     ),
                   ),
                 ),
