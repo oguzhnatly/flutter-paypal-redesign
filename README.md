@@ -1,7 +1,14 @@
-# Paypal Redesign UI (Challenge)
+# Paypal Redesign UI App (Challenge)
+<a href="https://saythanks.io/to/oguzhnatly@gmail.com" target="_blank">
+    <img alt="Say Thanks!" src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg">
+</a>
 
-This project is developed using Flutter and inspired from the winner *Vadim Demenko* of the Uplabs 🥇 See more on:
-[Uplabs Challenge](https://www.uplabs.com/challenges/paypal-app-redesign).
+This project is developed for iOS & Android, using Flutter and inspired from the winner *Vadim Demenko* of the Uplabs 🥇 paypal-app-redesign See more on: <a href="https://www.uplabs.com/challenges/paypal-app-redesign" target="_blank">Uplabs Challenge</a>.
+
+<p>
+    <img src="https://i.imgur.com/Jj5sSFi.png" width="210">
+    <img src="https://i.imgur.com/zrR3wlA.png" width="210">
+</p>
 
 ## Getting Started 🚀
 
@@ -9,28 +16,16 @@ This project is developed using Flutter and inspired from the winner *Vadim Deme
 - Install the dependicies
 - Run it
 
-## Developer
+## Getting Started
 
--  Oğuzhan Atalay [github.com/oguzhnatly](https://github.com/oguzhnatly)
+For help getting started with Flutter, view our online <a href="https://flutter.io/" target="_blank">documentation</a>.
 
-## MIT LICENSE
+## Flutter Installation
 
->Copyright (c) 2020 Oğuzhan Atalay
->
->Permission is hereby granted, free of charge, to any person obtaining a copy
->of this software and associated documentation files (the "Software"), to deal
->in the Software without restriction, including without limitation the rights
->to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
->copies of the Software, and to permit persons to whom the Software is
->furnished to do so, subject to the following conditions:
->
->The above copyright notice and this permission notice shall be included in all
->copies or substantial portions of the Software.
->
->THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
->IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
->FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
->AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
->LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
->OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
->SOFTWARE.
+Please download this version of the Flutter SDK specifically - <a href="https://flutter.io/sdk-archive/" target="_blank">v1.22.5</a>
+
+<a href="https://flutter.io/setup-macos/" target="_blank">MacOS</a> | <a href="https://flutter.io/setup-windows/" target="_blank">Windows</a> | <a href="https://flutter.io/setup-linux/" target="_blank">Linux</a>
+
+## License
+
+<a href="https://github.com/oguzhnatly/flutter-paypal-redesign/blob/main/LICENSE" target="_blank">MIT</a>
