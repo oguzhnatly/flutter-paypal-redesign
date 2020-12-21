@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:paypal/colors.dart';
+import 'package:paypal/screens/activity.dart';
 import 'package:paypal/widgets/custom_box.dart';
 
 class HomePage extends StatefulWidget {
@@ -258,14 +259,24 @@ class _HomePageState extends State<HomePage> {
                     color: colorBlack,
                   ),
                 ),
-                Text(
-                  'View all',
-                  style: GoogleFonts.manrope(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: colorBlack.withOpacity(0.5),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ActivityPage(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'View all',
+                    style: GoogleFonts.manrope(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: colorBlack.withOpacity(0.5),
+                    ),
                   ),
-                ),
+                )
               ],
             ),
           ),
