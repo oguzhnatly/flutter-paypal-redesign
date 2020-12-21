@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:paypal/colors.dart';
 import 'package:paypal/screens/activity.dart';
+import 'package:paypal/screens/sendmoney.dart';
 import 'package:paypal/widgets/custom_box.dart';
 
 class HomePage extends StatefulWidget {
@@ -154,22 +155,32 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.all(20),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SvgPicture.asset('assets/icons/upload.svg'),
-                        Text(
-                          'Send Money',
-                          style: GoogleFonts.manrope(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: colorWhite,
-                          ),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SendMoneyPage(),
                         ),
-                      ],
+                      );
+                    },
+                    child: Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SvgPicture.asset('assets/icons/upload.svg'),
+                          Text(
+                            'Send Money',
+                            style: GoogleFonts.manrope(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: colorWhite,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
