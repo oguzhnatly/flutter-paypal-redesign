@@ -23,8 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.1
-  flutter_svg: ^0.19.2+1
+  cupertino_icons:
+  flutter_svg:
   google_fonts: ^1.1.1
 
 dev_dependencies:

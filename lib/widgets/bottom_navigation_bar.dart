@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,8 +41,7 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom>
         HomePage(),
         ContactsPage(),
         WalletScreen(),
-        Text('Screen4'),
-        Text('Screen5'),
+        Text('Setting Screen'),
       ],
     );
   }
@@ -64,8 +64,12 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom>
             left: 0,
             child: Container(
               width: size.width,
-              height: 65,
-              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 40),
+              padding: EdgeInsets.only(
+                top: Platform.isIOS ? 25 : 20,
+                bottom: Platform.isIOS ? 50 : 20,
+                left: 40,
+                right: 40,
+              ),
               decoration: BoxDecoration(
                 color: colorWhite,
                 borderRadius: BorderRadius.only(
