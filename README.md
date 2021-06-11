@@ -25,4 +25,4 @@ Please download this version of the Flutter SDK specifically - <a href="https://
 
 ## License
 
-<a href="https://github.com/oguzhantly/flutter-paypal-redesign/blob/main/LICENSE" target="_blank">MIT</a>
+<a href="https://github.com/oguzhnatly/flutter-paypal-redesign/blob/main/LICENSE" target="_blank">MIT</a>
